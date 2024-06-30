@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Navbar from './components/Navbar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <div className="container">
+    <Navbar />
+    <h1>Welcome to the Auth App</h1>
+    <Link to="/register" className="btn btn-primary m-2">Register</Link>
+    <Link to="/login" className="btn btn-secondary m-2">Login</Link>
+  </div>
+);
 
 export default App;
